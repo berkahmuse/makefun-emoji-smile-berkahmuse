@@ -25,8 +25,9 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const EMOJI = "🤗";
+const EMOJI = "🤗"; // U+1F917 HUGGING FACE — one code point, 4 bytes UTF-8
+const OUTPUT_FILE = "entry.txt";
 const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 
 mkdirSync(outputDir, { recursive: true });
-writeFileSync(join(outputDir, "entry.txt"), EMOJI, "utf8");
+writeFileSync(join(outputDir, OUTPUT_FILE), EMOJI, "utf8");
